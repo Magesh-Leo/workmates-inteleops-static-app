@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import "@fortawesome/fontawesome-free/css/all.min.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0 0% 100%);
+  --foreground: hsl(210 25% 7.8431%);
+  --card: hsl(0 0% 100%);
+  --card-foreground: hsl(210 25% 7.8431%);
+  --popover: hsl(0 0% 100%);
+  --popover-foreground: hsl(210 25% 7.8431%);
+  --primary: hsl(208 79% 40%);
+  --primary-foreground: hsl(0 0% 100%);
+  --secondary: hsl(210 25% 7.8431%);
+  --secondary-foreground: hsl(0 0% 100%);
+  --muted: hsl(220 13% 94%);
+  --muted-foreground: hsl(210 25% 7.8431%);
+  --accent: hsl(211 51% 93%);
+  --accent-foreground: hsl(208 79% 40%);
+  --destructive: hsl(356 91% 54%);
+  --destructive-foreground: hsl(0 0% 100%);
+  --border: hsl(214 32% 91%);
+  --input: hsl(200 23% 97%);
+  --ring: hsl(208 79% 53%);
+  --radius: 0.5rem;
+  
+  /* Workmates IntelliOps Theme Colors */
+  --workmates-primary: hsl(220 100% 50%);
+  --workmates-secondary: hsl(25 100% 55%);
+  --workmates-blue: hsl(220 100% 50%);
+  --workmates-orange: hsl(25 100% 55%);
+  --success-green: hsl(134 61% 41%);
+  --error-red: hsl(356 91% 54%);
+  --warning-amber: hsl(42 93% 51%);
+  --neutral-bg: hsl(220 13% 97%);
+  --neutral-border: hsl(220 13% 91%);
+  --text-secondary: hsl(208 5% 46%);
+  --text-primary: hsl(210 11% 15%);
+  
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: Georgia, serif;
+  --font-mono: Menlo, monospace;
+}
+
+.dark {
+  --background: hsl(0 0% 3.9%);
+  --foreground: hsl(0 0% 98%);
+  --card: hsl(0 0% 3.9%);
+  --card-foreground: hsl(0 0% 98%);
+  --popover: hsl(0 0% 3.9%);
+  --popover-foreground: hsl(0 0% 98%);
+  --primary: hsl(208 79% 53%);
+  --primary-foreground: hsl(0 0% 100%);
+  --secondary: hsl(0 0% 14.9%);
+  --secondary-foreground: hsl(0 0% 98%);
+  --muted: hsl(0 0% 14.9%);
+  --muted-foreground: hsl(0 0% 63.9%);
+  --accent: hsl(0 0% 14.9%);
+  --accent-foreground: hsl(0 0% 98%);
+  --destructive: hsl(0 62.8% 30.6%);
+  --destructive-foreground: hsl(0 0% 98%);
+  --border: hsl(0 0% 14.9%);
+  --input: hsl(0 0% 14.9%);
+  --ring: hsl(208 79% 53%);
+  
+  /* Dark Workmates IntelliOps Theme Colors */
+  --workmates-primary: hsl(220 100% 60%);
+  --workmates-secondary: hsl(25 100% 65%);
+  --workmates-blue: hsl(220 100% 60%);
+  --workmates-orange: hsl(25 100% 65%);
+  --success-green: hsl(134 61% 48%);
+  --error-red: hsl(356 91% 61%);
+  --warning-amber: hsl(42 93% 58%);
+  --neutral-bg: hsl(0 0% 6%);
+  --neutral-border: hsl(0 0% 14.9%);
+  --text-secondary: hsl(0 0% 63.9%);
+  --text-primary: hsl(0 0% 98%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold;
+  }
+
+  .text-text-primary {
+    color: var(--text-primary);
+  }
+
+  .text-text-secondary {
+    color: var(--text-secondary);
+  }
+
+  .bg-neutral-bg {
+    background-color: var(--neutral-bg);
+  }
+
+  .border-neutral-border {
+    border-color: var(--neutral-border);
+  }
+
+  .bg-workmates-primary {
+    background-color: var(--workmates-primary);
+  }
+
+  .text-workmates-primary {
+    color: var(--workmates-primary);
+  }
+
+  .bg-workmates-secondary {
+    background-color: var(--workmates-secondary);
+  }
+
+  .text-workmates-secondary {
+    color: var(--workmates-secondary);
+  }
+
+  .bg-workmates-blue {
+    background-color: var(--workmates-blue);
+  }
+
+  .text-workmates-blue {
+    color: var(--workmates-blue);
+  }
+
+  .bg-workmates-orange {
+    background-color: var(--workmates-orange);
+  }
+
+  .text-workmates-orange {
+    color: var(--workmates-orange);
+  }
+
+  .hover\:bg-blue-700:hover {
+    background-color: hsl(208 79% 35%);
+  }
+
+  .bg-success-green {
+    background-color: var(--success-green);
+  }
+
+  .text-success-green {
+    color: var(--success-green);
+  }
+
+  .bg-error-red {
+    background-color: var(--error-red);
+  }
+
+  .text-error-red {
+    color: var(--error-red);
+  }
+
+  .bg-warning-amber {
+    background-color: var(--warning-amber);
+  }
+
+  .text-warning-amber {
+    color: var(--warning-amber);
+  }
+
+  /* Custom component styles */
+  .sidebar-nav-item {
+    @apply flex items-center px-4 py-3 text-sm font-medium rounded-lg transition-colors;
+  }
+
+  .sidebar-nav-item-active {
+    @apply bg-blue-50 text-workmates-primary border-l-4 border-workmates-primary;
+  }
+
+  .sidebar-nav-item-inactive {
+    @apply text-text-secondary hover:bg-gray-50;
+  }
+
+  /* Badge variants */
+  .badge-status-open {
+    @apply bg-blue-100 text-blue-800;
+  }
+
+  .badge-status-in-progress {
+    @apply bg-yellow-100 text-yellow-800;
+  }
+
+  .badge-status-resolved {
+    @apply bg-green-100 text-green-800;
+  }
+
+  .badge-status-closed {
+    @apply bg-gray-100 text-gray-800;
+  }
+
+  .badge-status-escalated {
+    @apply bg-red-100 text-red-800;
+  }
+
+  .badge-priority-low {
+    @apply bg-gray-100 text-gray-800;
+  }
+
+  .badge-priority-medium {
+    @apply bg-yellow-100 text-yellow-800;
+  }
+
+  .badge-priority-high {
+    @apply bg-orange-100 text-orange-800;
+  }
+
+  .badge-priority-critical {
+    @apply bg-red-100 text-red-800;
+  }
+
+  .badge-role-admin {
+    @apply bg-red-100 text-red-800;
+  }
+
+  .badge-role-agent {
+    @apply bg-blue-100 text-blue-800;
+  }
+
+  .badge-role-client {
+    @apply bg-green-100 text-green-800;
+  }
+
+  /* Dark mode overrides */
+  .dark .bg-blue-50 {
+    background-color: hsl(208 79% 15%);
+  }
+
+  .dark .text-workmates-primary {
+    color: var(--workmates-primary);
+  }
+
+  .dark .hover\:bg-gray-50:hover {
+    background-color: hsl(0 0% 20%);
+  }
+
+  .dark .bg-neutral-bg {
+    background-color: var(--neutral-bg);
+  }
+
+  .dark .border-neutral-border {
+    border-color: var(--neutral-border);
+  }
+
+  /* Professional shadows */
+  .shadow-professional {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  }
+
+  .shadow-professional-lg {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+
+  /* Animation utilities */
+  .fade-in {
+    animation: fadeIn 0.2s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-4px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Focus styles for accessibility */
+  .focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-enterprise-blue focus:ring-offset-2;
+  }
+
+  /* Custom scrollbar for webkit browsers */
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: var(--neutral-bg);
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: var(--text-secondary);
+    border-radius: 3px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    background: var(--text-primary);
+  }
+}
