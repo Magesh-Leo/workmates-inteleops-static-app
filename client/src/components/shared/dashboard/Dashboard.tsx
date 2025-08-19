@@ -48,13 +48,12 @@ const DashboardC: React.FC = () => {
 
     try {
       const queryParams = new URLSearchParams({
-        // json: "true",
+        json: "true",
         days: filterParams.days.toString(),
         viewType: filterParams.viewType,
         page: filterParams.page.toString(),
         startDate: filterParams.startDate,
         endDate: filterParams.endDate,
-        html: "true",
       });
       const url = `${API_BASE_URL}/dashboard?${queryParams}`;
       console.log("url:::", url);
