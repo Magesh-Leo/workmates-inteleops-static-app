@@ -38,7 +38,7 @@ export default function LoginPage() {
       <div className="relative w-full max-w-md bg-white/10 backdrop-blur-xl border border-white/20 p-8 rounded-2xl shadow-2xl space-y-3">
         {/* Logo */}
         <div className="flex flex-col items-center space-y-2">
-          <img src="/assets/logo.png" alt="IntelliOps" className="w-24 h-24" />
+          <img src="/logo.png" alt="IntelliOps" className="w-24 h-24" />
           {/* <h1 className="text-3xl font-extrabold text-white tracking-wide">
             IntelliOps
           </h1> */}
@@ -78,9 +78,9 @@ export default function LoginPage() {
             Sign In
           </button>
 
-          <p className="text-center text-sm text-gray-400">
+          {/* <p className="text-center text-sm text-gray-400">
             Use <strong>admin / password123</strong> to login
-          </p>
+          </p> */}
         </form>
       </div>
     </div>

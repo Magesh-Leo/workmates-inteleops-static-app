@@ -19,7 +19,7 @@ export default function Topbar() {
       <div className="flex items-center justify-between">
         {/* Logo */}
         <img
-          src="/assets/logo.png"
+          src="/logo.png"
           alt="Intelliops Logo"
           className="h-10 sm:h-12 w-auto object-contain brightness-110"
         />
