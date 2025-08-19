@@ -590,37 +590,58 @@ export default function Dashboard() {
         </Card>
       </div>
 
-      {/* Quick Actions & Account Onboarding & Escalation Trends & L1 Efficiency */}
+      {/* Business Intelligence & Account Onboarding and Escalation Trends & L1 Efficiency */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        {/* Quick Actions */}
         <Card>
           <CardHeader>
-            <CardTitle>Quick Actions</CardTitle>
+            <CardTitle className="flex items-center">
+              <i className="fas fa-analytics text-workmates-primary mr-2"></i>
+              Business Intelligence
+            </CardTitle>
           </CardHeader>
-          <CardContent className="grid grid-cols-2 gap-4">
-            <Button variant="outline" className="p-4 h-auto flex flex-col items-center text-center">
-              <i className="fas fa-robot text-2xl text-workmates-primary mb-3"></i>
-              <p className="text-sm font-medium text-text-primary">Create Rule</p>
-              <p className="text-xs text-text-secondary">New automation</p>
-            </Button>
-            <Button variant="outline" className="p-4 h-auto flex flex-col items-center text-center">
-              <i className="fas fa-key text-2xl text-warning-amber mb-3"></i>
-              <p className="text-sm font-medium text-text-primary">API Keys</p>
-              <p className="text-xs text-text-secondary">Manage access</p>
-            </Button>
-            <Button variant="outline" className="p-4 h-auto flex flex-col items-center text-center">
-              <i className="fas fa-chart-bar text-2xl text-success-green mb-3"></i>
-              <p className="text-sm font-medium text-text-primary">Reports</p>
-              <p className="text-xs text-text-secondary">Analytics</p>
-            </Button>
-            <Button variant="outline" className="p-4 h-auto flex flex-col items-center text-center">
-              <i className="fas fa-share-alt text-2xl text-workmates-primary mb-3"></i>
-              <p className="text-sm font-medium text-text-primary">Share Dashboard</p>
-              <p className="text-xs text-text-secondary">Export & Share</p>
-            </Button>
+          <CardContent>
+            <div className="grid grid-cols-2 gap-4 mb-4">
+              <div className="text-center p-3 bg-gray-100 dark:bg-gray-800 rounded-lg">
+                <div className="text-lg font-bold text-gray-900 dark:text-gray-100">247%</div>
+                <div className="text-xs text-gray-500 dark:text-gray-400">ROI Growth</div>
+              </div>
+              <div className="text-center p-3 bg-gray-100 dark:bg-gray-800 rounded-lg">
+                <div className="text-lg font-bold text-gray-900 dark:text-gray-100">18 mins</div>
+                <div className="text-xs text-gray-500 dark:text-gray-400">Avg Response</div>
+              </div>
+            </div>
+            <div className="space-y-3">
+              <div className="flex justify-between items-center">
+                <span className="text-sm">Contract Renewals</span>
+                <div className="flex items-center">
+                  <div className="w-20 bg-gray-200 rounded-full h-2 mr-2">
+                    <div className="bg-success-green h-2 rounded-full" style={{width: '85%'}}></div>
+                  </div>
+                  <span className="text-sm font-medium">85%</span>
+                </div>
+              </div>
+              <div className="flex justify-between items-center">
+                <span className="text-sm">Client Satisfaction</span>
+                <div className="flex items-center">
+                  <div className="w-20 bg-gray-200 rounded-full h-2 mr-2">
+                    <div className="bg-workmates-primary h-2 rounded-full" style={{width: '96%'}}></div>
+                  </div>
+                  <span className="text-sm font-medium">4.8★</span>
+                </div>
+              </div>
+              <div className="flex justify-between items-center">
+                <span className="text-sm">Service Uptime</span>
+                <div className="flex items-center">
+                  <div className="w-20 bg-gray-200 rounded-full h-2 mr-2">
+                    <div className="bg-success-green h-2 rounded-full" style={{width: '99.9%'}}></div>
+                  </div>
+                  <span className="text-sm font-medium">99.9%</span>
+                </div>
+              </div>
+            </div>
           </CardContent>
         </Card>
-        {/* Escalation Trends & L1 Efficiency */}
+        {/* Escalation Trends and L1 Efficiency */}
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center">
@@ -675,9 +696,9 @@ export default function Dashboard() {
         </Card>
       </div>
 
-      {/* Client Portfolio & Business Intelligence */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <Card>
+      {/* Client Portfolio & Quick Actions */}
+      {/* <div className="grid grid-cols-1 lg:grid-cols-2 gap-6"> */}
+        {/* <Card>
           <CardHeader>
             <CardTitle className="flex items-center justify-between">
               <div className="flex items-center">
@@ -729,58 +750,37 @@ export default function Dashboard() {
               </div>
             </div>
           </CardContent>
-        </Card>
+        </Card> */}
 
-        <Card>
+        {/* Quick Actions */}
+        {/* <Card>
           <CardHeader>
-            <CardTitle className="flex items-center">
-              <i className="fas fa-analytics text-workmates-primary mr-2"></i>
-              Business Intelligence
-            </CardTitle>
+            <CardTitle>Quick Actions</CardTitle>
           </CardHeader>
-          <CardContent>
-            <div className="grid grid-cols-2 gap-4 mb-4">
-              <div className="text-center p-3 bg-gray-100 dark:bg-gray-800 rounded-lg">
-                <div className="text-lg font-bold text-gray-900 dark:text-gray-100">247%</div>
-                <div className="text-xs text-gray-500 dark:text-gray-400">ROI Growth</div>
-              </div>
-              <div className="text-center p-3 bg-gray-100 dark:bg-gray-800 rounded-lg">
-                <div className="text-lg font-bold text-gray-900 dark:text-gray-100">18 mins</div>
-                <div className="text-xs text-gray-500 dark:text-gray-400">Avg Response</div>
-              </div>
-            </div>
-            <div className="space-y-3">
-              <div className="flex justify-between items-center">
-                <span className="text-sm">Contract Renewals</span>
-                <div className="flex items-center">
-                  <div className="w-20 bg-gray-200 rounded-full h-2 mr-2">
-                    <div className="bg-success-green h-2 rounded-full" style={{width: '85%'}}></div>
-                  </div>
-                  <span className="text-sm font-medium">85%</span>
-                </div>
-              </div>
-              <div className="flex justify-between items-center">
-                <span className="text-sm">Client Satisfaction</span>
-                <div className="flex items-center">
-                  <div className="w-20 bg-gray-200 rounded-full h-2 mr-2">
-                    <div className="bg-workmates-primary h-2 rounded-full" style={{width: '96%'}}></div>
-                  </div>
-                  <span className="text-sm font-medium">4.8★</span>
-                </div>
-              </div>
-              <div className="flex justify-between items-center">
-                <span className="text-sm">Service Uptime</span>
-                <div className="flex items-center">
-                  <div className="w-20 bg-gray-200 rounded-full h-2 mr-2">
-                    <div className="bg-success-green h-2 rounded-full" style={{width: '99.9%'}}></div>
-                  </div>
-                  <span className="text-sm font-medium">99.9%</span>
-                </div>
-              </div>
-            </div>
+          <CardContent className="grid grid-cols-2 gap-4">
+            <Button variant="outline" className="p-4 h-auto flex flex-col items-center text-center">
+              <i className="fas fa-robot text-2xl text-workmates-primary mb-3"></i>
+              <p className="text-sm font-medium text-text-primary">Create Rule</p>
+              <p className="text-xs text-text-secondary">New automation</p>
+            </Button>
+            <Button variant="outline" className="p-4 h-auto flex flex-col items-center text-center">
+              <i className="fas fa-key text-2xl text-warning-amber mb-3"></i>
+              <p className="text-sm font-medium text-text-primary">API Keys</p>
+              <p className="text-xs text-text-secondary">Manage access</p>
+            </Button>
+            <Button variant="outline" className="p-4 h-auto flex flex-col items-center text-center">
+              <i className="fas fa-chart-bar text-2xl text-success-green mb-3"></i>
+              <p className="text-sm font-medium text-text-primary">Reports</p>
+              <p className="text-xs text-text-secondary">Analytics</p>
+            </Button>
+            <Button variant="outline" className="p-4 h-auto flex flex-col items-center text-center">
+              <i className="fas fa-share-alt text-2xl text-workmates-primary mb-3"></i>
+              <p className="text-sm font-medium text-text-primary">Share Dashboard</p>
+              <p className="text-xs text-text-secondary">Export & Share</p>
+            </Button>
           </CardContent>
-        </Card>
-      </div>
+        </Card> */}
+      {/* </div> */}
 
       {/* Service Impact Summary for Business */}
       <Card>

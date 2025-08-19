@@ -9,17 +9,18 @@ const integrations = [
     button: "Connect now",
   },
   {
+    name: "Jira",
+    icon: "fab fa-atlassian",
+    color: "#0052CC",
+    description: "Track issues and manage projects with Jira integration.",
+    button: "Connect now",
+    status: "Active",
+  },
+  {
     name: "Gmail",
     icon: "fab fa-google",
     color: "#EA4335",
     description: "Integrate with Gmail for seamless email management.",
-    button: "Connect now",
-  },
-  {
-    name: "Microsoft Teams",
-    icon: "fab fa-microsoft",
-    color: "#6264A7",
-    description: "Connect with Teams for collaboration and notifications.",
     button: "Connect now",
   },
   {
@@ -28,12 +29,13 @@ const integrations = [
     color: "#C83E2D",
     description: "Manage support tickets and customer queries with Zoho Desk.",
     button: "Connect now",
+    status: "Active",
   },
   {
-    name: "Jira",
-    icon: "fab fa-atlassian",
-    color: "#0052CC",
-    description: "Track issues and manage projects with Jira integration.",
+    name: "Microsoft Teams",
+    icon: "fab fa-microsoft",
+    color: "#6264A7",
+    description: "Connect with Teams for collaboration and notifications.",
     button: "Connect now",
   },
   {
@@ -57,6 +59,14 @@ const integrations = [
     color: "#9333ea",
     description: "Get enriched leads from Clay into HeyReach.",
     button: "Connect now",
+  },
+  {
+    name: "ServiceNow",
+    icon: "fas fa-cogs", // You can pick another icon if you like
+    color: "#1a73e8",
+    description: "Automate workflows and manage IT services with ServiceNow.",
+    button: "Connect now",
+    status: "Active",
   },
   {
     name: "RB2B",
@@ -121,28 +131,35 @@ export default function NotificationPage() {
             key={platform.name}
             className="border rounded-xl p-4 shadow-sm hover:shadow-md transition bg-white"
           >
-            <div className="flex items-center mb-3">
-              <i
-                className={platform.icon}
-                style={{ color: platform.color, fontSize: "20px" }}
-              ></i>
-              <h2 className="ml-3 font-semibold text-gray-800">
-                {platform.name}
-              </h2>
+            <div className="flex items-center justify-between mb-3">
+              <div className="flex items-center">
+                <i
+                  className={platform.icon}
+                  style={{ color: platform.color, fontSize: "20px" }}
+                ></i>
+                <h2 className="ml-3 font-semibold text-gray-800">
+                  {platform.name}
+                </h2>
+              </div>
+
+              {platform.status && (
+                <span className="text-xs px-2 py-1 rounded-md bg-green-100 text-green-700">
+                  {platform.status}
+                </span>
+              )}
             </div>
+
             <p className="text-gray-600 text-sm mb-4">
               {platform.description}
             </p>
-            <button className="text-sm px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700">
+            {!platform.status && (<button className="text-sm px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700">
               {platform.button}
-            </button>
+            </button>)}
           </div>
         ))}
 
         {filtered.length === 0 && (
-          <p className="text-gray-500 col-span-full">
-            No integrations found.
-          </p>
+          <p className="text-gray-500 col-span-full">No integrations found.</p>
         )}
       </div>
     </div>

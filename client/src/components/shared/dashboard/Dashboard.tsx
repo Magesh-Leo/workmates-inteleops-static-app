@@ -179,6 +179,14 @@ const DashboardC: React.FC = () => {
                   handleFilterChangeWithReset("days", days);
                   handleFilterChangeWithReset("startDate", formatDate(pastDate));
                   handleFilterChangeWithReset("endDate", formatDate(today));
+                  // Fetch data after updating filters
+                  fetchDashboardData({
+                    ...filters,
+                    days,
+                    startDate: formatDate(pastDate),
+                    endDate: formatDate(today),
+                    page: 1,
+                  });
                 }}
               >
                 <SelectTrigger id="days" className="h-9">

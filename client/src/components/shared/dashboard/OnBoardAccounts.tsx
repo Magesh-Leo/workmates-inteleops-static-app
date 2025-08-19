@@ -29,7 +29,7 @@ export default function OnBoardAccounts({ onboardedAccounts }: { onboardedAccoun
       value: "$1150",
       trend: "+47%",
       trendType: "positive",
-      description: "Based on 2,920 hours saved @ $33/hr"
+      description: "Based on 35 hours saved @ $33/hr"
     },
     {
       title: "Mean Time to Resolution",
@@ -82,7 +82,7 @@ export default function OnBoardAccounts({ onboardedAccounts }: { onboardedAccoun
         {stats.map((stat) => (
           <Card key={stat.label} className="rounded-2xl shadow-md hover:shadow-lg transition-shadow">
             <CardContent className="flex items-center gap-4 p-4">
-              <stat.icon className="w-8 h-8 text-indigo-600" /> {/* ✅ Lucide Icon */}
+              <stat.icon className="w-8 h-8 text-blue-600" /> {/* ✅ Lucide Icon */}
               <div>
                 <p className="text-xl font-semibold">{stat.value}</p>
                 <p className="text-sm text-gray-500">{stat.label}</p>
