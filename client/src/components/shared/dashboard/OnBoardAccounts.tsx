@@ -26,7 +26,7 @@ export default function OnBoardAccounts({ onboardedAccounts }: { onboardedAccoun
     },
     {
       title: "Cost Savings (Weekly)",
-      value: "$96,360",
+      value: "$1150",
       trend: "+47%",
       trendType: "positive",
       description: "Based on 2,920 hours saved @ $33/hr"

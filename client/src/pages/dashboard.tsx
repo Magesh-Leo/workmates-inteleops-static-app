@@ -233,127 +233,8 @@ export default function Dashboard() {
         </Card>
       </div>
 
-      {/* Escalation Trends & L1 Efficiency */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <Card>
-          <CardHeader>
-            <CardTitle className="flex items-center">
-              <i className="fas fa-chart-line text-workmates-primary mr-2"></i>
-              Monthly Escalation Trends
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="space-y-4">
-              <div className="grid grid-cols-3 gap-4 text-center">
-                <div className="p-3 rounded-lg bg-gray-100 dark:bg-gray-800">
-                  <div className="text-lg font-bold text-gray-900 dark:text-gray-100">87%</div>
-                  <div className="text-xs text-gray-500 dark:text-gray-400">L1 Resolution</div>
-                  <div className="text-xs text-gray-900 dark:text-gray-100">↑ 3%</div>
-                </div>
-                <div className="p-3 rounded-lg bg-gray-100 dark:bg-gray-800">
-                  <div className="text-lg font-bold text-gray-900 dark:text-gray-100">10%</div>
-                  <div className="text-xs text-gray-500 dark:text-gray-400">L2 Escalation</div>
-                  <div className="text-xs text-gray-900 dark:text-gray-100">↓ 2%</div>
-                </div>
-                <div className="p-3 rounded-lg bg-gray-100 dark:bg-gray-800">
-                  <div className="text-lg font-bold text-gray-900 dark:text-gray-100">3%</div>
-                  <div className="text-xs text-gray-500 dark:text-gray-400">L3 Escalation</div>
-                  <div className="text-xs text-gray-900 dark:text-gray-100">↓ 1%</div>
-                </div>
-              </div>
-
-              <div className="space-y-2">
-                <div className="text-sm font-medium text-gray-900 dark:text-gray-100">Escalation Reasons</div>
-                <div className="space-y-2">
-                  <div className="flex justify-between items-center text-sm">
-                    <span className="text-gray-800 dark:text-gray-200">Network Infrastructure</span>
-                    <Badge className="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200">L3 - 45%</Badge>
-                  </div>
-                  <div className="flex justify-between items-center text-sm">
-                    <span className="text-gray-800 dark:text-gray-200">Database Issues</span>
-                    <Badge className="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200">L2 - 32%</Badge>
-                  </div>
-                  <div className="flex justify-between items-center text-sm">
-                    <span className="text-gray-800 dark:text-gray-200">Security Incidents</span>
-                    <Badge className="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200">L3 - 38%</Badge>
-                  </div>
-                  <div className="flex justify-between items-center text-sm">
-                    <span className="text-gray-800 dark:text-gray-200">Application Errors</span>
-                    <Badge className="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200">L2 - 68%</Badge>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </CardContent>
-
-        </Card>
-
-        <Card>
-          <CardHeader>
-            <CardTitle className="flex items-center">
-              <i className="fas fa-brain text-workmates-primary mr-2"></i>
-              IntelliOps L1 Efficiency Metrics
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="space-y-4">
-              {/* Top Summary Box */}
-              <div className="text-center p-4 bg-gray-800 dark:bg-gray-200 rounded-lg text-white dark:text-gray-900">
-                <div className="text-2xl font-bold">$127K</div>
-                <div className="text-sm opacity-90">Monthly Cost Savings vs Traditional L1</div>
-              </div>
-
-              {/* Two Metrics */}
-              <div className="grid grid-cols-2 gap-3">
-                <div className="p-3 bg-gray-100 dark:bg-gray-700 rounded-lg text-center">
-                  <div className="text-lg font-bold text-gray-900 dark:text-gray-100">2.4x</div>
-                  <div className="text-xs text-gray-500 dark:text-gray-300">Faster Resolution</div>
-                </div>
-                <div className="p-3 bg-gray-100 dark:bg-gray-700 rounded-lg text-center">
-                  <div className="text-lg font-bold text-gray-900 dark:text-gray-100">94%</div>
-                  <div className="text-xs text-gray-500 dark:text-gray-300">Accuracy Rate</div>
-                </div>
-              </div>
-
-              {/* Progress Bars */}
-              <div className="space-y-3">
-                <div>
-                  <div className="flex justify-between text-sm mb-1">
-                    <span>Auto-Resolution Success</span>
-                    <span className="font-medium">78%</span>
-                  </div>
-                  <div className="w-full bg-gray-300 dark:bg-gray-600 rounded-full h-2">
-                    <div className="bg-gray-900 dark:bg-gray-100 h-2 rounded-full" style={{ width: '78%' }}></div>
-                  </div>
-                </div>
-
-                <div>
-                  <div className="flex justify-between text-sm mb-1">
-                    <span>Agent Efficiency</span>
-                    <span className="font-medium">92%</span>
-                  </div>
-                  <div className="w-full bg-gray-300 dark:bg-gray-600 rounded-full h-2">
-                    <div className="bg-gray-900 dark:bg-gray-100 h-2 rounded-full" style={{ width: '92%' }}></div>
-                  </div>
-                </div>
-
-                <div>
-                  <div className="flex justify-between text-sm mb-1">
-                    <span>Escalation Avoidance</span>
-                    <span className="font-medium">87%</span>
-                  </div>
-                  <div className="w-full bg-gray-300 dark:bg-gray-600 rounded-full h-2">
-                    <div className="bg-gray-900 dark:bg-gray-100 h-2 rounded-full" style={{ width: '87%' }}></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-      </div>
-
       {/* Compliance & Risk Management */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center">
@@ -423,52 +304,6 @@ export default function Dashboard() {
                   <div className="text-xs text-text-secondary">3rd party dependencies</div>
                 </div>
                 <Badge className="bg-yellow-100 text-yellow-800">Medium</Badge>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-
-        <Card>
-          <CardHeader>
-            <CardTitle className="flex items-center">
-              <i className="fas fa-dollar-sign text-success-green mr-2"></i>
-              Financial Insights
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="space-y-4">
-              {/* Monthly Revenue */}
-              <div className="text-center p-3 bg-gray-100 dark:bg-gray-800 rounded-lg">
-                <div className="text-lg font-bold text-gray-900 dark:text-gray-100">$142,500</div>
-                <div className="text-xs text-gray-500 dark:text-gray-400">Monthly Revenue</div>
-              </div>
-
-              {/* Operational Costs & Margin */}
-              <div className="grid grid-cols-2 gap-3">
-                <div className="text-center p-2 bg-gray-100 dark:bg-gray-700 rounded-lg">
-                  <div className="text-sm font-bold text-gray-900 dark:text-gray-100">$38K</div>
-                  <div className="text-xs text-gray-500 dark:text-gray-400">Op. Costs</div>
-                </div>
-                <div className="text-center p-2 bg-gray-100 dark:bg-gray-700 rounded-lg">
-                  <div className="text-sm font-bold text-gray-900 dark:text-gray-100">73%</div>
-                  <div className="text-xs text-gray-500 dark:text-gray-400">Margin</div>
-                </div>
-              </div>
-
-              {/* Breakdown */}
-              <div className="space-y-2">
-                <div className="flex justify-between text-sm">
-                  <span className="text-gray-700 dark:text-gray-300">License Fees</span>
-                  <span className="text-gray-500 dark:text-gray-400">$12,000</span>
-                </div>
-                <div className="flex justify-between text-sm">
-                  <span className="text-gray-700 dark:text-gray-300">Infrastructure</span>
-                  <span className="text-gray-500 dark:text-gray-400">$8,500</span>
-                </div>
-                <div className="flex justify-between text-sm">
-                  <span className="text-gray-700 dark:text-gray-300">Staff Hours</span>
-                  <span className="text-gray-500 dark:text-gray-400">$17,500</span>
-                </div>
               </div>
             </div>
           </CardContent>
@@ -755,7 +590,7 @@ export default function Dashboard() {
         </Card>
       </div>
 
-      {/* Quick Actions & Account Onboarding */}
+      {/* Quick Actions & Account Onboarding & Escalation Trends & L1 Efficiency */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Quick Actions */}
         <Card>
@@ -785,51 +620,58 @@ export default function Dashboard() {
             </Button>
           </CardContent>
         </Card>
-
-        {/* Managed Account Onboarding */}
+        {/* Escalation Trends & L1 Efficiency */}
         <Card>
-          <CardHeader className="flex flex-row items-center justify-between">
-            <CardTitle>Account Onboarding</CardTitle>
-            <Badge variant="secondary">Beta</Badge>
+          <CardHeader>
+            <CardTitle className="flex items-center">
+              <i className="fas fa-chart-line text-workmates-primary mr-2"></i>
+              Monthly Escalation Trends
+            </CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-sm text-text-secondary mb-4">Streamline new managed service accounts</p>
-            <div className="space-y-3">
-              <div className="flex items-center space-x-3">
-                <div className="w-6 h-6 bg-success-green rounded-full flex items-center justify-center">
-                  <i className="fas fa-check text-white text-xs"></i>
+            <div className="space-y-4">
+              <div className="grid grid-cols-3 gap-4 text-center">
+                <div className="p-3 rounded-lg bg-gray-100 dark:bg-gray-800">
+                  <div className="text-lg font-bold text-gray-900 dark:text-gray-100">87%</div>
+                  <div className="text-xs text-gray-500 dark:text-gray-400">L1 Resolution</div>
+                  <div className="text-xs text-gray-900 dark:text-gray-100">↑ 3%</div>
                 </div>
-                <span className="text-sm text-text-primary">Client Information Collection</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <div className="w-6 h-6 bg-enterprise-blue rounded-full flex items-center justify-center">
-                  <span className="text-white text-xs font-bold">2</span>
+                <div className="p-3 rounded-lg bg-gray-100 dark:bg-gray-800">
+                  <div className="text-lg font-bold text-gray-900 dark:text-gray-100">10%</div>
+                  <div className="text-xs text-gray-500 dark:text-gray-400">L2 Escalation</div>
+                  <div className="text-xs text-gray-900 dark:text-gray-100">↓ 2%</div>
                 </div>
-                <span className="text-sm text-text-primary">Platform Integration Setup</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <div className="w-6 h-6 bg-neutral-border rounded-full flex items-center justify-center">
-                  <span className="text-text-secondary text-xs font-bold">3</span>
+                <div className="p-3 rounded-lg bg-gray-100 dark:bg-gray-800">
+                  <div className="text-lg font-bold text-gray-900 dark:text-gray-100">3%</div>
+                  <div className="text-xs text-gray-500 dark:text-gray-400">L3 Escalation</div>
+                  <div className="text-xs text-gray-900 dark:text-gray-100">↓ 1%</div>
                 </div>
-                <span className="text-sm text-text-secondary">Automation Rules Configuration</span>
               </div>
-              <div className="flex items-center space-x-3">
-                <div className="w-6 h-6 bg-neutral-border rounded-full flex items-center justify-center">
-                  <span className="text-text-secondary text-xs font-bold">4</span>
+
+              <div className="space-y-2">
+                <div className="text-sm font-medium text-gray-900 dark:text-gray-100">Escalation Reasons</div>
+                <div className="space-y-2">
+                  <div className="flex justify-between items-center text-sm">
+                    <span className="text-gray-800 dark:text-gray-200">Network Infrastructure</span>
+                    <Badge className="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200">L3 - 45%</Badge>
+                  </div>
+                  <div className="flex justify-between items-center text-sm">
+                    <span className="text-gray-800 dark:text-gray-200">Database Issues</span>
+                    <Badge className="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200">L2 - 32%</Badge>
+                  </div>
+                  <div className="flex justify-between items-center text-sm">
+                    <span className="text-gray-800 dark:text-gray-200">Security Incidents</span>
+                    <Badge className="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200">L3 - 38%</Badge>
+                  </div>
+                  <div className="flex justify-between items-center text-sm">
+                    <span className="text-gray-800 dark:text-gray-200">Application Errors</span>
+                    <Badge className="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200">L2 - 68%</Badge>
+                  </div>
                 </div>
-                <span className="text-sm text-text-secondary">User Access & Training</span>
               </div>
-            </div>
-            <div className="flex space-x-3 mt-6">
-              <Button 
-                onClick={() => setShowOnboardingModal(true)}
-                className="flex-1 bg-workmates-primary hover:bg-workmates-blue"
-              >
-                Start Onboarding
-              </Button>
-              <Button variant="outline">Guide</Button>
             </div>
           </CardContent>
+
         </Card>
       </div>
 
@@ -965,7 +807,7 @@ export default function Dashboard() {
 
             {/* Monthly Operational Savings */}
             <div className="text-center p-4 bg-gray-100 dark:bg-gray-800 rounded-lg">
-              <div className="text-2xl font-bold text-gray-900 dark:text-gray-100">$184K</div>
+              <div className="text-2xl font-bold text-gray-900 dark:text-gray-100">62%</div>
               <div className="text-sm text-gray-500 dark:text-gray-400 mb-2">Monthly Operational Savings</div>
               <div className="text-xs space-y-1 text-gray-700 dark:text-gray-300">
                 <div>• Manual Labor Reduction</div>

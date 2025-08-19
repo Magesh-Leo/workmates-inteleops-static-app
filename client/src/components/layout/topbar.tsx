@@ -21,7 +21,7 @@ export default function Topbar() {
         <img
           src="/logo.png"
           alt="Intelliops Logo"
-          className="h-10 sm:h-12 w-auto object-contain brightness-110"
+          className="h-12 lg:h-16 sm:h-16 w-auto object-contain brightness-110"
         />
 
 

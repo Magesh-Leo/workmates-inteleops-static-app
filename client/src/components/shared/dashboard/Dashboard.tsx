@@ -107,13 +107,6 @@ const DashboardC: React.FC = () => {
     setFilters(newFilters);
   };
 
-  // Handle pagination
-  const handlePageChange = (newPage: number) => {
-    const updatedFilters = { ...filters, page: newPage };
-    handleFilterChange("page", newPage);
-    fetchDashboardData(updatedFilters);
-  };
-
   // Reset filters to default
   const resetFilters = () => {
     const defaultFilters: Filters = {
@@ -177,7 +170,16 @@ const DashboardC: React.FC = () => {
               </Label>
               <Select
                 value={String(filters.days)}
-                onValueChange={(value) => handleFilterChange("days", parseInt(value))}
+                onValueChange={(value) => {
+                  const days = parseInt(value);
+                  const today = new Date();
+                  const pastDate = new Date();
+                  pastDate.setDate(today.getDate() - days);
+
+                  handleFilterChangeWithReset("days", days);
+                  handleFilterChangeWithReset("startDate", formatDate(pastDate));
+                  handleFilterChangeWithReset("endDate", formatDate(today));
+                }}
               >
                 <SelectTrigger id="days" className="h-9">
                   <SelectValue placeholder="Select range" />
@@ -213,24 +215,6 @@ const DashboardC: React.FC = () => {
                   <SelectItem value="monthly">Monthly</SelectItem>
                 </SelectContent>
               </Select>
-            </div>
-
-            {/* Page Filter */}
-            <div className="flex flex-col space-y-1 min-w-[80px]">
-              <Label htmlFor="page" className="text-sm font-medium">
-                Page
-              </Label>
-              <Input
-                id="page"
-                type="number"
-                value={filters.page}
-                onChange={(e) =>
-                  handleFilterChange("page", parseInt(e.target.value))
-                }
-                min={1}
-                className="h-9"
-                placeholder="1"
-              />
             </div>
 
             {/* Start Date Filter */}
