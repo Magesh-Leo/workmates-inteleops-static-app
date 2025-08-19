@@ -29,7 +29,7 @@ export default function OnBoardAccounts({ onboardedAccounts }: { onboardedAccoun
       value: "$1150",
       trend: "+47%",
       trendType: "positive",
-      description: "Based on 35 hours saved @ $33/hr"
+      description: "Based on 168 hours saved @ $7/hr"
     },
     {
       title: "Mean Time to Resolution",
