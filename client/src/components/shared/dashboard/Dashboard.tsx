@@ -288,7 +288,7 @@ const DashboardC: React.FC = () => {
 
       {/* Chart */}
 
-      <div className="grid grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Trend Chart */}
         <div className="bg-white p-4 rounded-2xl shadow">
           <h2 className="text-lg font-semibold mb-3">
@@ -311,6 +311,7 @@ const DashboardC: React.FC = () => {
           />
         </div>
       </div>
+
 
       {/* Error Alert */}
       {/* {error && (
