@@ -1,10 +1,17 @@
 import express, { type Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
 import { setupVite, serveStatic, log } from "./vite";
+import path from "path";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+// if you copied assets into dist/assets
+app.use("/assets", express.static(path.join(__dirname, "assets")));
 
 app.use((req, res, next) => {
   const start = Date.now();
@@ -69,5 +76,3 @@ app.use((req, res, next) => {
     log(`serving on port ${port}`);
   });
 })();
-
-export default app;

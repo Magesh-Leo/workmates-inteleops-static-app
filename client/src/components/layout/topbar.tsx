@@ -15,14 +15,15 @@ export default function Topbar() {
   };
 
   return (
-    <header className="bg-white border-b border-neutral-border px-4 sm:px-6 py-3 sm:py-4">
+    <header className="bg-white border-b border-neutral-border px-4 sm:px-6 py-2 sm:py-2">
       <div className="flex items-center justify-between">
         {/* Logo */}
         <img
-          src="https://cloudworkmates.com/wp-content/uploads/2025/03/Web-Main-Logo-1.png"
-          alt="Workmates Logo"
-          className="h-10 sm:h-12 w-auto object-contain"
+          src="/assets/logo.png"
+          alt="Intelliops Logo"
+          className="h-10 sm:h-12 w-auto object-contain brightness-110"
         />
+
 
         {/* Desktop User Info */}
         <div className="hidden sm:flex items-center space-x-4">

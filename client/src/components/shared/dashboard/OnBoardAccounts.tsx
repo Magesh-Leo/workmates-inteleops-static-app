@@ -1,6 +1,7 @@
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { OnboardedAccount } from "@/types/dashboard";
+import { Users, Building2, Globe2, UserCheck } from "lucide-react"; // ✅ Lucide icons
 
 export default function OnBoardAccounts({ onboardedAccounts }: { onboardedAccounts: OnboardedAccount[] }) {
   const totalAccounts = onboardedAccounts?.length ?? 0;
@@ -9,10 +10,10 @@ export default function OnBoardAccounts({ onboardedAccounts }: { onboardedAccoun
   const onboardedCount = totalAccounts;
 
   const stats = [
-    { label: "Onboarded Accounts", value: onboardedCount, icon: "👥" },
-    { label: "Total Accounts", value: totalAccounts, icon: "🏢" },
-    { label: "Unique Teams", value: uniqueTeams, icon: "👥" },
-    { label: "Unique Regions", value: uniqueRegions, icon: "🌍" },
+    { label: "Onboarded Accounts", value: onboardedCount, icon: Users },
+    { label: "Total Accounts", value: totalAccounts, icon: Building2 },
+    { label: "Unique Teams", value: uniqueTeams, icon: UserCheck },
+    { label: "Unique Regions", value: uniqueRegions, icon: Globe2 },
   ];
 
   const kpiData = [
@@ -79,9 +80,9 @@ export default function OnBoardAccounts({ onboardedAccounts }: { onboardedAccoun
       {/* Stats Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-6">
         {stats.map((stat) => (
-          <Card key={stat.label} className="rounded-2xl shadow-md">
+          <Card key={stat.label} className="rounded-2xl shadow-md hover:shadow-lg transition-shadow">
             <CardContent className="flex items-center gap-4 p-4">
-              <span className="text-2xl">{stat.icon}</span>
+              <stat.icon className="w-8 h-8 text-indigo-600" /> {/* ✅ Lucide Icon */}
               <div>
                 <p className="text-xl font-semibold">{stat.value}</p>
                 <p className="text-sm text-gray-500">{stat.label}</p>
