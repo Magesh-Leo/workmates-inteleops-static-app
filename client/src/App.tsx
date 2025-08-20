@@ -31,7 +31,11 @@ function Layout() {
       <Topbar />
       <div className="flex flex-1">
         <Sidebar />
-        <main className="flex-1 p-6 space-y-6 overflow-auto">
+          <main className="flex-1 h-screen overflow-y-auto scrollbar-hide p-6 space-y-6" 
+          style={{
+            scrollbarWidth: 'none',
+            msOverflowStyle: 'none',
+          }}>
           <Switch>
             <Route path="/dashboard" component={() => <ProtectedRoute component={Dashboard} />} />
             <Route path="/tickets" component={() => <ProtectedRoute component={Tickets} />} />
