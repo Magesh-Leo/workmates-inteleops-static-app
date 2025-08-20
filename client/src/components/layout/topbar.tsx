@@ -15,13 +15,13 @@ export default function Topbar() {
   };
 
   return (
-    <header className="bg-white border-b border-neutral-border px-4 sm:px-6 py-2 sm:py-2">
+    <header className="bg-white border-b border-neutral-border px-2 sm:pl-2 sm:pr-6 py-2 sm:py-2">
       <div className="flex items-center justify-between">
         {/* Logo */}
         <img
           src="/logo.png"
           alt="Intelliops Logo"
-          className="h-12 lg:h-16 sm:h-16 w-auto object-contain brightness-110 ml-6"
+          className="h-12 lg:h-16 sm:h-16 w-auto object-contain brightness-110"
         />
 
 
